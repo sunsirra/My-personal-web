@@ -49,7 +49,7 @@ function createHearts() {
       if(photo.classList.contains('crying')) {
         photo.classList.remove('crying');
         photo.style.transform = 'scale(1)';
-        img.src = './想不想我.jpg';
+        img.src = 'img/想不想我.jpg';
         photo.style.animation = 'float 1s ease';
         setTimeout(() => photo.style.animation = '', 1000);
       }
@@ -68,7 +68,7 @@ function createHearts() {
       requestAnimationFrame(() => {
         photo.classList.add('crying');
         photo.style.transform = `scale(0.8) rotate(3deg)`;
-        img.src = './你再想想呢.jpg';
+        img.src = 'img/你再想想呢.jpg';
         photo.style.animation = 'shake 0.5s ease';
         
         yesBtn.style.transform = `scale(${Math.min(currentYesScale * 1.2, maxGrow)})`;
@@ -115,6 +115,6 @@ function createHearts() {
 
 // 在DOM加载时预加载图片
 const preloadImages = () => {
-    new Image().src = './你再想想呢.jpg';
+    new Image().src = 'img/你再想想呢.jpg';
   }
   document.addEventListener('DOMContentLoaded', preloadImages);
